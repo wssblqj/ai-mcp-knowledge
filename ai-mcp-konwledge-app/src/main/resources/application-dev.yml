@@ -18,6 +18,22 @@ spring:
       embedding:
         options:
           num-batch: 768
+    openai:
+      base-url: https://apis.itedus.cn
+      api-key: sk-YqgAG0idUwN089vw1eE92b22F6Cf4dB3A84b1bB314A47b1f
+      chat:
+        options:
+          model: gpt-4o
+      embedding-model: text-embedding-ada-002
+      embedding:
+        options:
+          num-batch: 1536
+    mcp:
+      client:
+        request-timeout: 360s
+        stdio:
+          servers-configuration: classpath:/config/mcp-servers-config.json
+
 
 logging:
   level:
