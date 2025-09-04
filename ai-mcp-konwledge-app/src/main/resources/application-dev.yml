@@ -1,0 +1,25 @@
+server:
+  port: 8099
+
+spring:
+  #  main:
+  #    web-application-type: none
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://117.72.172.224:15432/ai-rag-knowledge
+    type: com.zaxxer.hikari.HikariDataSource
+  ai:
+    ollama:
+      base-url: http://6ea7201d290e4c6aa00f-deepseek-r1-llm-api.gcs-xy1a.jdcloud.com/
+      mode:
+      embedding-model: nomic-embed-text
+      embedding:
+        options:
+          num-batch: 768
+
+logging:
+  level:
+    root: info
+  config: classpath:logback-spring.xml
